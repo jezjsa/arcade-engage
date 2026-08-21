@@ -22,6 +22,14 @@ const GAMES = [
     image: "/no-brakes.jpg",
     countKey: "noBrakes",
   },
+  {
+    id: "winter-walker",
+    title: "Winter Walker",
+    copy: "Walk the snow. O left, P right. Same Arcade Engage account.",
+    href: "https://winterwalker.arcadeengage.com/",
+    image: "/winter-walker.jpg",
+    countKey: "winterWalker",
+  },
 ];
 
 function paint(counts) {
@@ -45,7 +53,7 @@ function paint(counts) {
   }).join("");
 }
 
-paint({ fieldRush: 0, noBrakes: 0 });
+paint({ fieldRush: 0, noBrakes: 0, winterWalker: 0 });
 
 try {
   const client = new ConvexClient(CONVEX_URL);

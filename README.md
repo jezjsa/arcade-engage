@@ -9,5 +9,6 @@ npm run dev
 ```
 
 Hub: `arcadeengage.com`  
-Field Rush: `https://field-rush.vercel.app/`  
-No Brakes: `https://no-brakes.vercel.app/`
+Field Rush: `fieldrush.arcadeengage.com` (alias `field-rush.vercel.app`)  
+No Brakes: `nobrakes.arcadeengage.com` (alias `no-brakes.vercel.app`)  
+Winter Walker: `winterwalker.arcadeengage.com`
