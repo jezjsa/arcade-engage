@@ -25,10 +25,11 @@ const GAMES = [
   {
     id: "winter-walker",
     title: "Winter Walker",
-    copy: "Walk the snow. O left, P right. Same Arcade Engage account.",
-    href: "https://winter-walker.vercel.app/",
+    copy: "Walk the snow. Same Arcade Engage account. Not open yet.",
+    href: null,
     image: "/winter-walker.jpg",
     countKey: "winterWalker",
+    soon: true,
   },
 ];
 
@@ -37,19 +38,21 @@ function paint(counts) {
   if (!root) return;
   root.innerHTML = GAMES.map((game) => {
     const n = counts?.[game.countKey] ?? 0;
-    return `
-      <a class="card" href="${game.href}">
-        <img src="${game.image}" alt="" />
-        <div class="card-body">
-          <h2>${game.title}</h2>
-          <p>${game.copy}</p>
-          <div class="meta">
-            <span>Play</span>
-            <span>${n} online</span>
-          </div>
+    const body = `
+      <img src="${game.image}" alt="" />
+      <div class="card-body">
+        <h2>${game.title}</h2>
+        <p>${game.copy}</p>
+        <div class="meta">
+          <span>${game.soon ? "Coming soon" : "Play"}</span>
+          <span>${game.soon ? "" : `${n} online`}</span>
         </div>
-      </a>
+      </div>
     `;
+    if (game.soon || !game.href) {
+      return `<div class="card soon">${body}</div>`;
+    }
+    return `<a class="card" href="${game.href}">${body}</a>`;
   }).join("");
 }
 

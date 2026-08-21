@@ -62,6 +62,14 @@ h1 {
   color: inherit;
 }
 
+.card.soon {
+  opacity: 0.78;
+}
+
+.card.soon .meta {
+  color: var(--dim);
+}
+
 .card img {
   width: 100%;
   aspect-ratio: 16 / 9;
