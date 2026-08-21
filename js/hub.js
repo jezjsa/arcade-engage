@@ -26,7 +26,7 @@ const GAMES = [
     id: "winter-walker",
     title: "Winter Walker",
     copy: "Walk the snow. O left, P right. Same Arcade Engage account.",
-    href: "https://winterwalker.arcadeengage.com/",
+    href: "https://winter-walker.vercel.app/",
     image: "/winter-walker.jpg",
     countKey: "winterWalker",
   },
