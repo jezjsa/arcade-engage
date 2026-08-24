@@ -23,6 +23,14 @@ const GAMES = [
     countKey: "noBrakes",
   },
   {
+    id: "hold-the-hex",
+    title: "Hold the Hex",
+    copy: "Defend the brass. Place shapes, stop the dots, survive 200 waves.",
+    href: "https://hold-the-hex.vercel.app/",
+    image: "/hold-the-hex.jpg",
+    countKey: "formHold",
+  },
+  {
     id: "winter-walker",
     title: "Winter Walker",
     copy: "Walk the snow. Same Arcade Engage account. Not open yet.",
@@ -56,7 +64,7 @@ function paint(counts) {
   }).join("");
 }
 
-paint({ fieldRush: 0, noBrakes: 0, winterWalker: 0 });
+paint({ fieldRush: 0, noBrakes: 0, winterWalker: 0, formHold: 0 });
 
 try {
   const client = new ConvexClient(CONVEX_URL);

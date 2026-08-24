@@ -11,4 +11,5 @@ npm run dev
 Hub: `https://arcade-engage.vercel.app/`  
 Field Rush: `https://field-rush.vercel.app/`  
 No Brakes: `https://no-brakes.vercel.app/`  
+Hold the Hex: `https://hold-the-hex.vercel.app/`  
 Winter Walker: `https://winter-walker.vercel.app/`
