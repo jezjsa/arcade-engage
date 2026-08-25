@@ -43,7 +43,7 @@ const GAMES = [
     id: "scrap-runner",
     title: "Scrap Runner",
     copy: "Scavenge the yard. Collect the energy cells, then race the extraction hatch.",
-    href: "https://scrap-runner.vercel.app/",
+    href: "https://scrap-runner-ruby.vercel.app/",
     image: "/scrap-runner.jpg",
     countKey: "scrapRunner",
   },
