@@ -39,6 +39,14 @@ const GAMES = [
     countKey: "winterWalker",
     soon: true,
   },
+  {
+    id: "scrap-runner",
+    title: "Scrap Runner",
+    copy: "Scavenge the yard. Collect the energy cells, then race the extraction hatch.",
+    href: "https://scrap-runner.vercel.app/",
+    image: "/scrap-runner.jpg",
+    countKey: "scrapRunner",
+  },
 ];
 
 function paint(counts) {
@@ -64,7 +72,7 @@ function paint(counts) {
   }).join("");
 }
 
-paint({ fieldRush: 0, noBrakes: 0, winterWalker: 0, formHold: 0 });
+paint({ fieldRush: 0, noBrakes: 0, winterWalker: 0, formHold: 0, scrapRunner: 0 });
 
 try {
   const client = new ConvexClient(CONVEX_URL);
