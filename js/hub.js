@@ -31,6 +31,15 @@ const GAMES = [
     countKey: "formHold",
   },
   {
+    id: "scrap-runner",
+    title: "Scrap Runner",
+    copy: "Scavenge the yard. Collect the energy cells, then race the extraction hatch.",
+    href: "https://scrap-runner-ruby.vercel.app/",
+    image: "/scrap-runner.jpg",
+    countKey: "scrapRunner",
+    inDev: true,
+  },
+  {
     id: "winter-walker",
     title: "Winter Walker",
     copy: "Walk the snow. Same Arcade Engage account. Not open yet.",
@@ -39,14 +48,6 @@ const GAMES = [
     countKey: "winterWalker",
     soon: true,
   },
-  {
-    id: "scrap-runner",
-    title: "Scrap Runner",
-    copy: "Scavenge the yard. Collect the energy cells, then race the extraction hatch.",
-    href: "https://scrap-runner-ruby.vercel.app/",
-    image: "/scrap-runner.jpg",
-    countKey: "scrapRunner",
-  },
 ];
 
 function paint(counts) {
@@ -54,13 +55,17 @@ function paint(counts) {
   if (!root) return;
   root.innerHTML = GAMES.map((game) => {
     const n = counts?.[game.countKey] ?? 0;
+    const label = game.soon ? "Coming soon" : game.inDev ? "In Development" : "Play";
     const body = `
-      <img src="${game.image}" alt="" />
+      <div class="card-art">
+        <img src="${game.image}" alt="" />
+        ${game.inDev ? `<span class="card-flag">In Development</span>` : ""}
+      </div>
       <div class="card-body">
         <h2>${game.title}</h2>
         <p>${game.copy}</p>
         <div class="meta">
-          <span>${game.soon ? "Coming soon" : "Play"}</span>
+          <span>${label}</span>
           <span>${game.soon ? "" : `${n} online`}</span>
         </div>
       </div>

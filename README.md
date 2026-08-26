@@ -12,4 +12,5 @@ Hub: `https://arcade-engage.vercel.app/`
 Field Rush: `https://field-rush.vercel.app/`  
 No Brakes: `https://no-brakes.vercel.app/`  
 Hold the Hex: `https://hold-the-hex.vercel.app/`  
+Scrap Runner: `https://scrap-runner-ruby.vercel.app/`  
 Winter Walker: `https://winter-walker.vercel.app/`
